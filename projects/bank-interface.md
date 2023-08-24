@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/bank-interface/bank-interface-photo.png
 title: "Bank Interface"
-date: 2023
+date: 2023-03-26
 published: true
 labels:
   - C
