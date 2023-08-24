@@ -7,7 +7,7 @@ date: 2023
 published: true
 labels:
   - C
-summary: "A nearly exclusively coding project from the class that taught me C. This is the first project in which I felt like I could showcase my capabilities as a programmer."
+summary: "A coding project from the class that taught me C. This is the first project in which I felt like I could showcase my capabilities as a programmer."
 ---
 
 <div class="text-center p-4">
