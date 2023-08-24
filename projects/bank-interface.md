@@ -1,10 +1,10 @@
 ---
 layout: project
 type: project
-image: img/micromouse/micromouse-square.jpg
+image: img/bank-interface/bank-interface-photo.png
 title: "Bank Interface"
 date: 2023
-published: true
+published: false
 labels:
   - C
 summary: "A coding project from the class that taught me C. This is the first project in which I felt like I could showcase my capabilities as a programmer."
