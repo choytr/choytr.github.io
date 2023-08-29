@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/2020-OBDA-HS-Select-Band/2020-OBDA-HS-Select-Band-photo.jpg
+image: img/2019-piano-recital/2019-piano-recital-photo.jpg
 title: "2019-piano-recital"
 date: 2019-11-24
 published: true
