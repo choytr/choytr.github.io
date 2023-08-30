@@ -1,0 +1,20 @@
+---
+layout: essay
+type: essay
+title: "How Javascript opened my eyes"
+# All dates must be YYYY-MM-DD format!
+date: 2023-08-29
+published: true
+labels:
+  - Software Engineering
+  - Javscript
+---
+
+
+The first programming language I learned was Java. Soon after, I picked up C and a little bit of C++. Due to this, my impressions of programming and coding in general was that it was a very primitive activity. And that is by no means an inaccurate opinion- C is such a primitive yet influential language, and Java was based on C. Over time I believed more and more that programming and software development was all about fussing over the most minute details possible. I thought that the most micro building blocks of your code had to be flawless, and that they have such an enormous impact on your projects that it is imperative to spend all your time thinking about them. Then I entered my first week of ICS 314: Software Engineering I.
+
+I was introduced to what software development was actually about in ICS 314. Software development is not about coding- it is about design. In order to create good software, it needs to be designed well. This means the user's experience has to be as smooth and as enjoyable as possible. Of course this comes secondary to ensuring the software does what it actually needs to. But how are we supposed to balance our efforts between writing functional code and creating a user-friendly interface if so much time is spent fussing over syntax, type conversions, array types, pointers, data hiding, variable and function visibility, classes, inheritance, code readability, and code compatibility? Of course, not all of these completely disappear in javascript, but in my opinion are drastically improved in it. Humans are lazy. We create tools to either help us do things we don't want to do or to improve our quality of life. Javascript does both. For most people, it simplifies the coding process and makes everything easier so that we are now able to devote more brain power into creating whatever we want.
+
+This, however, still does not eliminate the need to write good code. To be a great programmer, you need to be able to do this, and javascript certainly makes it easier, but the programmer still needs to put in the time and effort to improve their own abilities. That is where I believe the idea of athletic software engineering from ICS 314 comes in. Athletic software engineering is applied to ICS 314 in the form of Workout Of the Day's (WODs). At the beginning of each class, we would spend a good chunk of time solving a coding problem. Despite the human brain not officially being a muscle, it behaves similarly to one. In order to strengthen a muscle, it is necessary to use it and push it to its limits consistently. The same applies for the brain- the more you use it for critical thinking and difficult problems, the more your neurons get used to activating in a certain way needed to approach new problems and thus you become smarter. If you use your brain to code a lot, you will naturally become better at coding. And thus the reasoning behind the WOD every class was born.
+
+I believe that athletic software engineering is not a "choice" to be had. As explained above, the only way to improve at something is by using your brain to do it consistently. The keyword here is consistently. It is crucial to do something you want to improve on at a regular, consistent pace. In the case of software engineering, the term athletic software engineering is the only option to improve at it. However, I think it is the format of athletic software engineering that will differ from person to person. Everyone has different schedules, priorities, and lives. Completing an intense coding problem every single day will not be effective, or even possible for many. But it does not have to be daily. Spending a little bit of time to challenge yourself once a week or maybe every two weeks can get you somewhere. At the end of the day, consistency is the key to becoming great.
