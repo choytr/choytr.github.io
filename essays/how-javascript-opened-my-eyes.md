@@ -7,7 +7,7 @@ date: 2023-08-29
 published: true
 labels:
   - Software Engineering
-  - Javscript
+  - Javacript
 ---
 
 
