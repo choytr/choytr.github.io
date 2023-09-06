@@ -28,6 +28,23 @@ As a result of the original poster's ill-preparation and horrendous lack of thou
 
 In stark contrast, [this thread](https://stackoverflow.com/questions/77042490/github-page-url-not-being-github-io-repo-about-but-github-io-about-instead) is formatted excellently. Following a concise 'object-deviation' format, a glance at the self-explanatory title "Github Page url not being github.io/repo/about but github.io/about instead" is all it takes to understand the problem at hand.
 
-Details of the topic at hand have been explained clearly. With the line "What I have right now is: user.github.io/about," a simple, desired outcome was stated,  
+Details of the topic at hand have been explained clearly. With the line:
+```
+What I have right now is: user.github.io/about
+```
+their symptoms were given, and the next line:
+```
+What I want is: user.github.io/portfolio-web/about
+```
+a desired outcome was stated simply and concisely.
 
+Immediately after, a code sample was presented: 
+```
+<Routes>
+  <Route exact path="/" element={<Home />} />
+  <Route path="/about" element={<AboutMe />} />
+  <Route path="/contact" element={<Contact />} />
+  <Route path="*" element={<NotFound />} />
+</Routes>
+```
 In addition, its topic was obviously something the original poster had contemplated and attempted to solve on their own. Having explained that they had attempted to do their own research to solve the problem themselves, new users reading their post will understand that they could use some help to push them in the right direction and will be more willing to contribute an answer. 
