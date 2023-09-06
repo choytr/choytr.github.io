@@ -3,8 +3,8 @@ layout: essay
 type: essay
 title: "The intricacies of internet literacy"
 # All dates must be YYYY-MM-DD format!
-date: 2023-08-29
-published: false
+date: 2023-09-05
+published: true
 labels:
   - Stack Overflow
   - Internet Literacy
