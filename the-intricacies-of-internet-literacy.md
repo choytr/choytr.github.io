@@ -12,6 +12,9 @@ labels:
 ---
 
 # How to be literate on the web
+
+The concept of internet literacy refers to one's ability to utilize the internet effectively in order to gain information or fulfil one's objectives. The internet is a vast place with an over-abundance of information, but in order to use it well, you must know where and how to look for answers. It is ultimately your own fault for not knowing how to find the answer you are looking for, or whether or not your problems are even solvable through the internet.
+
 ## The Bad Thread
 
 In this Stack Overflow thread, the title, which reads "Create custom tab bar in flutter," does not read like a technical problem whatsoever. In fact, it does not even look like a problem; it looks like the title for a tutorial article on tab bars in Flutter. Titles are the first thing that any forum browser will see. They are the first impression to a question among the sea of countless queries that pop up every single minute. If, in the very first few words, you cannot convey the issue you are having clearly, it will almost always be ignored.
