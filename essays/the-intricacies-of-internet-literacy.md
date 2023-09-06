@@ -48,3 +48,9 @@ Immediately after, a code sample was presented:
 </Routes>
 ```
 In addition, its topic was obviously something the original poster had contemplated and attempted to solve on their own. Having explained that they had attempted to do their own research to solve the problem themselves, new users reading their post will understand that they could use some help to push them in the right direction and will be more willing to contribute an answer. 
+
+This well-thought out forum post netted a meaningful answer from a user that led to a discussion between the two further diagnosing the issue, eventually leading to a solution.
+
+## Conclusion
+
+Today, the world almost completely revolves around the internet. If you are unable to use the vast resources available on the internet, you will be left behind in the dust. To avoid this and to become successful in life, you must be competent at using the internet, and have internet literacy. As demonstrated by the two example threads provided above, preparation and thoughtfulness in forum posts are just one way to garner good information and support, and in contrast, a monkey-brained post will net you absolutely no results in the best case.
