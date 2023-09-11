@@ -24,3 +24,5 @@ https://www.youtube.com/watch?v=4vdKz1aXFqo&list=TLPQMjgwODIwMjNC50za_U8a6Q&inde
 
 Kingfishers Catch Fire:
 https://www.youtube.com/watch?v=yqTBfDTJlLs&list=TLPQMjgwODIwMjNC50za_U8a6Q&index=8
+
+My long time in band led me to meet many great people and learn valuable life lessons. I believe I greatly improved as a human being due to my experiences with my peers and directors. 
