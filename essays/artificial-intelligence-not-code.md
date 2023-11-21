@@ -4,7 +4,7 @@ type: essay
 title: "Artificial Intelligence, not Code"
 # All dates must be YYYY-MM-DD format!
 date: 2023-11-20
-published: false
+published: true
 labels:
   - Software Engineering
   - Javascript
