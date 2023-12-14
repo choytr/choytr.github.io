@@ -3,8 +3,8 @@ layout: essay
 type: essay
 title: "How to be resourceful in software engineering"
 # All dates must be YYYY-MM-DD format!
-date: 2023-12-10
-published: false
+date: 2023-12-14
+published: true
 labels:
   - Software Engineering
   - Javascript
