@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Artificial Intelligence, not Code | Truman Choy | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/choytr.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Truman Choy | Professional Portfolio">
+    <meta property="og:url" content="https://choytr.github.io/essays/artificial-intelligence-not-code.html">
+    <meta property="og:title" content="Artificial Intelligence, not Code | Truman Choy | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/choytr.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Artificial Intelligence, not Code | Truman Choy | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Truman Choy</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Artificial Intelligence, not Code</h1>
+  <span class="date">20 Nov 2023</span>
+  <hr>
+  <h1 id="introduction">Introduction</h1>
+<p>In regards to software engineering, which is an ever-growing, expanding, and evolving field, software engineers have to constantly learn new tools, techniques, frameworks, applications, etc. to keep up with the industry. What seems like every day, some brand new thing comes out that everyone needs to switch to in order to stay at the top of the competition. But at some point, we have to stop cramming our toolbox and ask ourselves, “how much of this do we really need?”</p>
+
+<p>With the advent of artificial intelligence, or AI, to many it may seem that ChatGPT may very well be the only tool we need to be software engineers. Heck, software engineers may not even be needed in a couple of years. But as of right now, I think it would be beneficial for many software engineers to re-evaluate their use, or lack thereof of AI to see how much this wonder tool can really impact our work, negative or positive.</p>
+
+<h1 id="personal-experience-with-ai">Personal Experience with AI:</h1>
+<p>My first experience learning software engineering concepts and skills was in my first software engineering course in college, ICS 314 Software Engineering I. This was the first course I ever took that actively encouraged the use of AI in our coding assignments and projects. At first, I was in this stuck-up mental state of thinking that AI has no place in coding and should never be used in any real world application. I thought it was merely a novelty thing and that what it could generate would never match the level of what a real coder could do, so for the first half of the course I adamantly avoided the use of generative AI like ChatGPT, or Copilot, the AI recommended by the course.</p>
+
+<h3 id="the-final-project">The final project</h3>
+<p>After a while, however, it came the time to get started on our final project, which was to create a small-scale website using Meteor. Meteor is a full-stack framework that implements React for frontend and MongoDB for the backend database. I took charge in taking the first steps to model and implement a solid database schema, and almost immediately I ran into a problem I did not know how to solve.</p>
+
+<h4 id="mongodb-in-a-nutshell">MongoDB in a nutshell</h4>
+<p>Put simply, MongoDB allows you to create collections of JSON-like objects, called “documents,” each of which can contain a field and its corresponding value:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    field: 'value'
+}
+</code></pre></div></div>
+<p>Each document can contain as many of these fields as you want:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    field1: 'value1',
+    field2: 'value2',
+    field3: 'value3',
+    ...
+}
+</code></pre></div></div>
+<p>Every document also has a field generated by MongoDB, called _id. The _id field is guaranteed to correspond to a value completely unique to that document:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    _id: 'n4NAniZKC2SCdGp8j'
+    field1: 'value1',
+    field2: 'value2',
+    field3: 'value3',
+    ...
+}
+</code></pre></div></div>
+<h3 id="the-problem">The problem:</h3>
+<p>While implementing our application’s database, one thing I ended up needing to do was to filter from the database all documents that had an _id field that equaled to <em>some</em> _id value in a list of _id values we had specified beforehand. This having been practically my first real experience working with MongoDB, I hit the docs and came up with… nothing. Either I simply didn’t know how to work a documentation site, or my fetus brain was not enough to be able to read slightly dense documentation. Regardless, I was unable to rack my brain for a solution.</p>
+
+<p>After several days of pain and agony from trying a bunch of weird, quirky combinations of different coding techniques to accomplish this goal, I finally caved, and typed my first ChatGPT prompt:</p>
+
+<p><em>In Mongodb, how do I find all documents that have an _id field that matches some value in a an array?</em></p>
+
+<p>The answer:</p>
+
+<p><em>In MongoDB, you can use the $in operator to find all documents that have an _id field that matches some values in an array. Here’s an example using the find method in the MongoDB shell:</em></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Assume you have an array of _id values
+var idArray = [ObjectId("id1"), ObjectId("id2"), ObjectId("id3")];
+
+// Use the $in operator to find documents with _id in the idArray
+db.yourCollection.find({ _id: { $in: idArray } });
+</code></pre></div></div>
+
+<p>That’s it. “$in” was the answer. Three characters and a little bit of syntax research was all it took. It was at this moment that I realized, “hey, this thing is actually kind of useful.” Instead of being stuck on a single problem for several days, I could have asked ChatGPT and gotten the answer immediately.</p>
+
+<p>After this, I immediately incorporated ChatGPT into my workflow following the rest of the project, and found it <strong><em>immensely</em></strong> useful. The following is a list of every chance I had to use AI in ICS 314, and explanations of my applications:</p>
+
+<ul>
+  <li>WODs
+    <ul>
+      <li>All “Workout Of the Days” had ended by the time I discovered the potential of AI. During the WOD period, I actively avoided the use of ChatGPT and Copilot in solving these coding problems. Despite now knowing how much ChatGPT could have helped me, I do not regret avoiding it during these WODs. I believe that as much as ChatGPT has helped me, it could have just as much hindered me in learning and practicing the fundamentals of coding had I used it to solve these coding problems for me. Preparing for these WODs required rigorous practice and review of prior material, which really helped drill down the fundamentals of Javascript and HTML, which, at the end of the day, no matter what framework you are using, as long as there’s some Javascript and HTML, you still need in order to be a successful developer.</li>
+    </ul>
+  </li>
+  <li>Essays
+    <ul>
+      <li>Creative work is something I believe humans will forever be able to do better than any generative AI. Nevertheless, there is still reason to using AI to generate writing and literature. In the case of technical essays, AI can be a great help for a number of things, like grammar-checking, or even generating a good, solid base essay you can edit and add to and make your own. Despite this, I actively avoided using ChatGPT to help write my essays. I have used it to write for an essay for another class, so I definitely know the potential in that regard, but I felt like the essays written in this course had prompts that I genuinely cared about, so I took the time to write each essay myself, word for word.</li>
+    </ul>
+  </li>
+  <li>Final project
+    <ul>
+      <li>As mentioned earlier, the final project was what finally led me to using AI. After that first prompt, I would proceed to use it for a variety of things, like figuring out how to reactively change the application’s UI according to the database.</li>
+    </ul>
+  </li>
+  <li>Learning a concept / tutorial
+    <ul>
+      <li>This is what I think ChatGPT is best used for. Tying back to the introduction of this essay, in the ever-changing world of software engineering, there is just so much stuff software engineers have to learn and remember in order to survive. If you don’t remember everything, you lose productivity from having to search Stack Overflow or read documentation that may be too dense, unclear, inaccurate, or incomplete. There were a few times I wanted to use a function or package that I simply could not find or understand the documentation for, so asking ChatGPT would greatly clarify my understanding.</li>
+    </ul>
+  </li>
+  <li>Answering a question in class or in Discord
+    <ul>
+      <li>I did not use AI to do this. I never contributed to in-class or Discord discussions.</li>
+    </ul>
+  </li>
+  <li>Asking or answering a smart-question
+    <ul>
+      <li>To save the trouble and stress of writing to actual human beings, I would ask ChatGPT many questions that I can easily imagine being the topic of a Stack Overflow forum. Often, the quality of the answers from ChatGPT matched the quality of a typical Stack Overflow answer.</li>
+    </ul>
+  </li>
+  <li>Coding example e.g. “give an example of using Underscore .pluck”
+    <ul>
+      <li>Code from ChatGPT when I asked it to show me how to handle errors when using Meteor.call:
+<code class="language-plaintext highlighter-rouge">Meteor.call('methodName', arg1, arg2, (error, result) =&gt; {
+  if (error) {
+  // Handle error here
+  console.error('Error:', error.reason);
+  } else {
+  // Handle successful method execution here
+  console.log('Result:', result);
+  }
+  });</code></li>
+    </ul>
+  </li>
+  <li>Explaining code
+    <ul>
+      <li>I would notice the appearance of “cursor” objects in Meteor code and documentation. I had no clue what these were and how to use them, and the official Meteor documentation can be a little confusing, broad, and vague, so I asked ChatGPT for some use cases for cursors and could then personalize it to apply to our application.</li>
+    </ul>
+  </li>
+  <li>Writing code
+    <ul>
+      <li>If I used ChatGPT to write code, I would ask it to give an example of using certain techniques, see if it was something I could use, then apply it to my own code if so. Considering the sheer amount of code in our final project application, I did not think it would make much sense to ask it for code to copy-paste, as the style of the code would not fit with the rest of the code we have written, let alone work with it.</li>
+    </ul>
+  </li>
+  <li>Documenting code
+    <ul>
+      <li>I did not use AI for this, though this would be interesting to try with ChatGPT. Documentation is hard enough to write for humans, so I would like to see how a generative AI would document code considering it can probably understand the entire code library way better than even the creators of the library.</li>
+    </ul>
+  </li>
+  <li>Quality assurance e.g. “What’s wrong with this code here” or “Fix the ESLint errors in code here”
+    <ul>
+      <li>Sometimes, there would be an error from some stupid mistake I made that not even ChatGPT could find. I often copy-pasted my code and any errors into ChatGPT, and it has not failed to spot the mistake once. On one occasion, I forgot to import a file containing function definitions, and was completely stumped as to why I was getting errors that said “functionName not defined.” After seeing even ChatGPT getting stumped and unable to give me a clear answer to the solution, I decided to trace the entire call stack, and lo and behold- the server.js file, which loads ALL code necessary for the server side, did not contain an import for the functions. This is a good example of how ChatGPT can indirectly help solve your problems through its behavior.</li>
+    </ul>
+  </li>
+  <li>Other uses in ICS 314 not listed
+    <ul>
+      <li>Sometimes I would ask ChatGPT for ideas on how to do something a certain way. I would usually do this if I had already asked it to give me a solution, but the given solution had bits of code that I couldn’t use due to limitations imposed by some other code I had written. Most commonly, this involved React hooks, as I would get interesting errors about the ordering of hook usages.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="impact-on-learning-and-understanding">Impact on Learning and Understanding:</h1>
+<p>ChatGPT can be really useful, but also really detrimental to one’s learning. If you are just starting to learn the fundamentals of computer science, I think ChatGPT can actually set you back pretty far if you use it right off the bat. I am very grateful I started learning computer science concepts just as the advent of generative AI really took off. I was still learning and doing schoolwork the old-fashioned way, so I really had to study to excel in my early courses. But if I had access to ChatGPT in, say, my freshman year, my understand of computer science concepts would likely be much worse than it is now, as it likely would have discouraged me from studying and doing my homework assignments myself.</p>
+
+<p>Another thing to consider is that real-world experience is something that can be a little challenging for students to obtain, so when writing code for homework, assignments, and projects, it can sometimes be difficult to know if we’re writing code that is acceptable in an industry environment or not. Personally, I would love to know if I am writing spaghetti code that is nearly incomprehensible to another human being. ChatGPT helped me a lot in this regard, as when I asked for real-world examples of certain coding techniques that I was familiar with, ChatGPT’s way of doing it would look way different from mine, and often cleaner and more readable. In this way, I think AI can really help bridge the gap between a student who’s still learning the basics of computer science and someone who has been in the field for years.</p>
+
+<h1 id="practical-applications">Practical Applications:</h1>
+<p>Alongside taking ICS 314, I did an REU (Research Experience for Undergraduate students) with a software engineering team that coincidentally uses React and Typescript, which is a super-set of Javascript. My learning experiences in ICS 314 was crucial to my success in this REU, and my experiences in this REU directly complemented my ICS 314 work as well.</p>
+
+<p>During this REU, I was tasked with implementing small UI changes for a React application written primarily in Typescript. There was a ton of code that I had never seen before, but ChatGPT was extremely useful in deciphering a lot of Typescript syntax that I otherwise would have needed to spend hours upon hours of researching to figure out. I also used it to help me with my tasks in a manner very similar to that in ICS 314. Thus, I strongly believe AI has a proper place in a software engineering setting.</p>
+
+<h1 id="challenges-and-opportunities">Challenges and Opportunities:</h1>
+<p>The foremost challenge I have with AI is not a challenge with AI itself, but with people, specifically me. Thankfully, I managed to narrowly escape the <strong>deathtrap</strong> of using AI to do my intro-coding course assignments, but looking forward, I fear I may grow to rely on AI for my future studies and work. If I do so, I may end up losing out on major opportunities to develop as a coder.</p>
+
+<p>On the other hand, I think AI is kind of a double-edged sword. Despite having extremely destructive potential on a student’s learning experience, it can also drastically enrich it. If used and incorporated into learning correctly, I think it can surpass even some professors in not only teaching a course’s concepts, but being a resource and source for help. I can easily see myself asking ChatGPT for clarifications on future computer science concepts I may learn.</p>
+
+<h1 id="comparative-analysis">Comparative Analysis:</h1>
+<p>A typical lecture-based college course usually goes like this: a professor lectures in front of a hall full of dozens, maybe hundreds of people at once, and then the students go home, read the textbook, do the homework, turn in the homework, get a grade, rinse, repeat. It’s not a bad system, as it’s straight forward and easy to follow. But this presents a number of problems, particularly for the students. For one, there is a major disconnect between the professor and the students. The sheer number of students in some of these lecture-courses makes it impossible for the professor to remember every student’s faces, let alone their names. At this point, the professor might as well just record themselves lecture and upload it for the students to watch each semester, which some courses already do.</p>
+
+<p>Here’s my hot take: <strong>this is fine.</strong></p>
+
+<p>Well, this is fine for the beginner-level courses. Intro courses exist to not only provide students the core fundamentals of their corresponding major, but now that AI is a thing, they can also indirectly filter out students that wouldn’t be a good match for the major. In regards to computer science in particular, if you don’t have the work ethic to study, learn, and research, and you’re just using AI to automatically complete all your coding assignments, you will probably not make it very far after the intro courses. Like I mentioned earlier, AI is a <strong>deathtrap</strong> for students learning the fundamentals, so only those with enough work ethic to at least write their own code will succeed.</p>
+
+<p>However, this class structure will definitely not work for higher-level courses. Courses that cover more advanced topics, such as algorithms or software engineering, would work way better with a smaller scale classroom with perhaps two dozen people at most. This way, the students have a much deeper connection with the professor and therefore the concepts the professor teaches.</p>
+
+<p>These types of courses can actually work really well with AI, provided the students know how to use it efficiently and effectively. The potential to cheat and ChatGPT everything is still there, but it will get progressively harder the more advanced and complicated the topics are. Thus, if students want to use ChatGPT to help with their coursework, they will need to know what ChatGPT is capable of, what it is not so capable of, and, I think this is especially important, <em>be able to tell what answers the AI gives may be inaccurate.</em></p>
+
+<p>If you think about it, if you can tell that a ChatGPT answer to a complex question is inaccurate, and if you can figure out which parts are wrong and replace them with correct parts, then that’s how you know you understand something. It doesn’t take much brainpower to paste a question to ChatGPT, copy its entire answer, and submit it. It often DOES take brainpower, however, to read through ChatGPT’s answer, completely understand it and why it’s correct or incorrect, and then be able to personalize the answer for your circumstances.</p>
+
+<p>I think AI can be a great tool for learning. You just gotta know how to use it.</p>
+
+<h1 id="future-considerations">Future Considerations:</h1>
+<p>Discuss your thoughts on the future role of AI in software engineering education. Consider potential advancements, challenges, and areas for improvement.</p>
+
+<p>As AI becomes smarter and smarter, it will become easier and easier to use. Software engineers will have endless opportunities to apply AI to their work as over time, AI like ChatGPT will likely develop enough to answer even the most detailed, difficult, and rigorous problems professors may give their students. Right now, I believe AI is best at providing detailed information that already exists on the internet or giving examples of certain concepts, but is not very good at answering more complicated problems. Eventually, AI will develop enough to be able to do this, and that will present its own benefits as well as concerns as AI gets ever so closer to replacing us humans.</p>
+
+<h1 id="conclusion">Conclusion:</h1>
+<p>Now begs the question: how exactly are you supposed to know how to use AI for education? To be honest, after spouting all this nonsense, I still don’t really know. This is all from personal experience, and my ability to use AI in my studies was not taught to me. But what about students who don’t have such experience? Who will teach them what they really need to learn on their own and what should they use generative AI for?</p>
+
+<p>For a future ICS 314 course, I think it would be worth having a module teaching the ethics of using AI in software engineering. Take the feedback from the current students writing these essays, consider what may be the most important to keep in mind for students as they continue in their computer science degrees, and teach the future generations.</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

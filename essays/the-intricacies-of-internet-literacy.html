@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="The intricacies of internet literacy | Truman Choy | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/choytr.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Truman Choy | Professional Portfolio">
+    <meta property="og:url" content="https://choytr.github.io/essays/the-intricacies-of-internet-literacy.html">
+    <meta property="og:title" content="The intricacies of internet literacy | Truman Choy | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/choytr.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>The intricacies of internet literacy | Truman Choy | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Truman Choy</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">The intricacies of internet literacy</h1>
+  <span class="date">05 Sep 2023</span>
+  <hr>
+  <p>The concept of internet literacy refers to one’s ability to utilize the internet effectively in order to gain information or fulfil one’s objectives. The internet is a vast place with an over-abundance of information, but in order to use it well, you must know where and how to look for answers. It is ultimately your own fault for not knowing how to find the answer you are looking for, or whether or not your problems are even solvable through the internet. However, in some cases your own shortcomings will not only affect you. If you choose to approach a forum and use a discussion thread, you are choosing to consume the time and efforts of other living, breathing humans. Poorly asking a question in such forums will not only result in you getting ignored, but it will also waste the valuable time of the people who chose to spare you their time to attempt to comprehend and formulate an answer for you. Here, we take a look at two threads that represent some features of a horribly formulated question post, and an amazing one.</p>
+
+<h2 id="the-bad-thread">The Bad Thread</h2>
+
+<p>In this <a href="https://stackoverflow.com/questions/77049706/create-custom-tab-bar-in-flutter">Stack Overflow thread</a>, the title, which reads “Create custom tab bar in flutter,” does not read like a technical problem whatsoever. In fact, it does not even look like a problem; it looks like the title for a tutorial article on tab bars in Flutter. Titles are the first thing that any forum browser will see. They are the first impression to a question among the sea of countless queries that pop up every single minute. If, in the very first few words, you cannot convey the issue you are having clearly, it will almost always be ignored.</p>
+
+<p>However, this is a secondary priority to simply having a quality problem to post to a forum, and this thread fails to accomplish even that. A good forum discussion or support post topic would not be so vague or overly-complicated for the forum’s users to have an easier time answering. In this case, from the body of the post it appears this post was made to ask how to create a custom tab bar in Flutter. Two screenshots are provided, one presumably of a desired outcome, and the other… showcases the poster’s abilities? A question like this asking for an entire tutorial on how to design and create an entire user-interfacce is way too vague and encompasses too many aspects for anyone to spend a reasonable amount of time asking. Instead, the poster’s time would have been much more well-spent even attempting to start creating their desired interface, and later create a forum post once they discover a specific issue during development.</p>
+
+<p>There is also an unbelievably giant block of code with zero explanation at the end of the post. Assuming it is the code for the tab bar they are developng, it is way too long and complex for any single person to comprehend, not to mention the lack of explanation for its existence. Is there something to debug? Is there something wrong with the code? Are they looking for suggestions to make it cleaner?</p>
+
+<p>As a result of the original poster’s ill-preparation and horrendous lack of thought in formulating their post, zero answers have been contributed.</p>
+
+<h2 id="the-good-thread">The Good Thread</h2>
+
+<p>In stark contrast, <a href="https://stackoverflow.com/questions/77042490/github-page-url-not-being-github-io-repo-about-but-github-io-about-instead">this thread</a> is formatted excellently. Following a concise ‘object-deviation’ format, a glance at the self-explanatory title “Github Page url not being github.io/repo/about but github.io/about instead” is all it takes to understand the problem at hand.</p>
+
+<p>Details of the topic at hand have been explained clearly. With the line:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What I have right now is: user.github.io/about
+</code></pre></div></div>
+<p>their symptoms were given, and the next line:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What I want is: user.github.io/portfolio-web/about
+</code></pre></div></div>
+<p>a desired outcome was stated simply and concisely.</p>
+
+<p>Immediately after, a code sample was presented:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Routes&gt;
+  &lt;Route exact path="/" element={&lt;Home /&gt;} /&gt;
+  &lt;Route path="/about" element={&lt;AboutMe /&gt;} /&gt;
+  &lt;Route path="/contact" element={&lt;Contact /&gt;} /&gt;
+  &lt;Route path="*" element={&lt;NotFound /&gt;} /&gt;
+&lt;/Routes&gt;
+</code></pre></div></div>
+<p>making it even easier for passerbys to potentially diagnose the problem.</p>
+
+<p>In addition, its topic was obviously something the original poster had contemplated and attempted to solve on their own. Having explained that they had attempted to do their own research to solve the problem themselves, new users reading their post will understand that they could use some help to push them in the right direction and will be more willing to contribute an answer.</p>
+
+<p>This well-thought out forum post netted a meaningful answer from a user that led to a discussion between the two further diagnosing the issue, eventually leading to a solution.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Today, the world almost completely revolves around the internet. If you are unable to use the vast resources available on the internet, you will be left behind in the dust. To avoid this and to become successful in life, you must be competent at using the internet, and have internet literacy. As demonstrated by the two example threads provided above, preparation and thoughtfulness in forum posts are just one way to garner good information and support, and in contrast, a monkey-brained post will net you absolutely no results in the best case.</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
