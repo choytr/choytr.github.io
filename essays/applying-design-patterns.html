@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Applying Design Patterns | Truman Choy | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/choytr.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Truman Choy | Professional Portfolio">
+    <meta property="og:url" content="https://choytr.github.io/essays/applying-design-patterns.html">
+    <meta property="og:title" content="Applying Design Patterns | Truman Choy | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/choytr.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Applying Design Patterns | Truman Choy | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Truman Choy</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Applying Design Patterns</h1>
+  <span class="date">28 Nov 2023</span>
+  <hr>
+  <h2 id="defining-design-patterns">Defining design patterns</h2>
+<p>The whole reason we write code in the first place is to make our lives as human beings easier. We gain immense productivity from automating non-trivial tasks that humans cannot complete consistently and timely through technology. Through technology,
+we 
+can message anyone on the globe practically instantaneously whereas without technology we would have to rely on something like mailing letters to communicate. We
+can purchase virtually any physical item from the internet with the click of a button whereas trying to do so without technology would be quite non-trivial. If there’s some <em>common problem</em> that we need to solve, we can usually automate it.</p>
+
+<p>In regards to programming, if we didn’t have things like libraries, frameworks, packages, etc., we would have to rewrite a lot of code that already exists somewhere on the internet and, realistically speaking, probably works better too.</p>
+
+<h3 id="design-patterns-as-problem-solving">Design patterns as problem-solving</h3>
+<p>Design patterns have come about because programmers have realized that there are a lot of <em>common problems</em> that need to be solved. That means that in theory, we can automate those problems too.</p>
+
+<p>In practice, however, there are always problems that are not so trivial that we can automate it with code. These vague, yet recurring <em>patterns</em> of problems are hard to automate, but can be solved by similar approaches. When programming applications in 
+particular, we call these reusable approaches “design patterns.”</p>
+
+<p>In the real world, basic problem-solving skills involve recognizing patterns and knowing how to apply them to solve different problems. If you think about it, that is precisely what design patterns are: solutions to drastically different problems 
+that can be reapplied to variations of such problems. Design patterns are simply a problem-solving method. When programming, we use the same approaches to solving problems in different situations because they are proven to be effective.</p>
+
+<h2 id="design-patterns-in-lendor-vendors">Design patterns in Lendor-Vendors</h2>
+<p>Lendor-Vendors is the name of the organization and web application my team and I developed for our final project in ICS 314, Software Engineering I. It is an application that allows users to loan out their items to other users, or loan other users’ items.</p>
+
+<p>The app was developed with Meteor, a full-stack framework that uses React for the UI and MongoDB 
+for the database. Throughout the development process, we discovered and took advantage of many design patterns provided by the Meteor stack.</p>
+
+<h3 id="react">React</h3>
+<p>React is a frond-end framework that includes many features that allows you to, instead of writing tedious HTML logic, write clean and reusable components that you use flexibly and comfortably throughout your development process.</p>
+
+<h4 id="reusable-components">Reusable components</h4>
+<p>The biggest feature that React promotes is the idea of modular, reusable components. In React, everything is a component, defined as a .JSX file. Every page you see is a component. Each page is also made up of many components.</p>
+
+<p>The Lendor-Vendors app has a “Gallery” page, which displays every item that is currently available for loaning. There is also a page called “Your Items” which only displays the items the current user owns. An example of reusable components lie in 
+these two pages. They both display a component we defined- the Item Card.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const ItemCard = ({ item }) =&gt; (
+  &lt;Link id="cards-link" to={`/view_item/${item._id}`}&gt;
+    &lt;Card className="h-100 item-card"&gt;
+      &lt;Card.Header&gt;
+        &lt;Card.Img src={item.image} alt={`${item.title} image`} style= /&gt;
+      &lt;/Card.Header&gt;
+      &lt;Card.Body&gt;
+        &lt;Card.Title&gt;{item.title}&lt;/Card.Title&gt;
+      &lt;/Card.Body&gt;
+      {Roles.userIsInRole(Meteor.user(), 'admin') ? (
+        &lt;Container className="d-flex justify-content-start"&gt;
+          &lt;Row&gt;
+            &lt;Col&gt;
+              &lt;DeleteItemButton item={item} /&gt;
+            &lt;/Col&gt;
+          &lt;/Row&gt;
+        &lt;/Container&gt;
+      ) : ''}
+    &lt;/Card&gt;
+  &lt;/Link&gt;
+);
+</code></pre></div></div>
+<p>In both Gallery and Your Items, the follow piece of code displays all items:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Row xs={1} md={2} lg={3} xl={4} xxl={5} className="d-flex flex-wrap justify-content-center g-4 px-5"&gt;
+  {searchPattern === '' ? (
+    items.map((item, index) =&gt; &lt;Col style= key={index}&gt;&lt;ItemCard item={item} /&gt;&lt;/Col&gt;)
+  ) : (
+    fuseSearch.map((searchedObj, index) =&gt; &lt;Col style= key={index}&gt;&lt;ItemCard item={searchedObj.item} /&gt;&lt;/Col&gt;)
+  )}
+&lt;/Row&gt;
+</code></pre></div></div>
+
+<h3 id="model-view-controller">Model-view-controller</h3>
+<p>The model-view-controller is best explained as a system that has three components- the data model, the view that the user sees, and the controller that the user uses.</p>
+
+<h4 id="model">Model</h4>
+<p>The data model. In the Meteor stack, this refers to MongoDB, which is the program Meteor uses for database management. On the server side of the Lendor-Vendors app is the MongoDB database that all clients access. It stores all the data the app 
+needs.</p>
+
+<p>MongoDB allows you to organizze your database in “collections,” which are basically groups of data documents. In Lendor-Vendors, we have a variety of collections, but the key collections are:</p>
+<ul>
+  <li>Items</li>
+  <li>Requests</li>
+  <li>ForumRequests</li>
+  <li>Profiles</li>
+</ul>
+
+<p>Before we even began writing code, we needed to think about how we were going to design our database. These four were the main components we came up with when brainstorming our data model. By using MongoDB, we were able to implement these four 
+components seamlessly into our application by using collections.</p>
+
+<h4 id="view">View</h4>
+<p>This refers to the UI that the user interacts with. Our application is <strong><em>heavily</em></strong> styled using React-Bootstrap. Common features of React-Bootstrap we used are:</p>
+<ul>
+  <li>Grid layout</li>
+  <li>Cards</li>
+  <li>Modals</li>
+</ul>
+
+<p>Using the grid system Bootstrap provides, we were able to format our pages exactly the way we wanted.</p>
+
+<h4 id="controller">Controller</h4>
+<p>A typical React component JSX file in our project is structured like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const JSXComponent = () =&gt; {
+    // functions
+    someFunction
+    ...
+    return (
+        &lt;ComponentThatUsesTheAboveFunctions function={someFunction} /&gt;
+    );
+};
+</code></pre></div></div>
+
+<p>We define whatever functions we need separately from the UI section. This way, back-end logic is <em>mostly</em> separated from the front-end HTML. This separation was a major factor in our productivity. Had we mixed and nested our logic within our 
+front-end code like this:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const JSXComponent = () =&gt; {
+    return (
+        &lt;ComponentThatUsesTheAboveFunctions function={someFunction() {
+            doSomething;
+        }} /&gt;
+    );
+};
+</code></pre></div></div>
+<p>it would have been a nightmare to work with. This looks fine right now, but our logic was typically complicated and required multiple lines per function:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const JSXComponent = () =&gt; {
+    return (
+        &lt;ComponentThatUsesTheAboveFunctions function={someFunction() {
+            doSomething;
+            doSomethingElse;
+            const something = getSomething();
+            if (something.hasSomething) {
+                something.modifySomething;
+            }
+            return something;
+        }} /&gt;
+    );
+};
+</code></pre></div></div>
+<p>Hopefully it is clear how this approach can quickly become way too complex to manage.</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

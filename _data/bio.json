@@ -1,0 +1,75 @@
+{
+  "basics": {
+    "name": "Truman Choy",
+    "label": "Student",
+    "picture": "https://github.com/choytr.png",
+    "email": "choytr@hawaii.edu",
+    "phone": "808-670-6274",
+    "website": "https://choytr.github.io",
+    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2026.",
+    "location": { "address": "", "postalCode": "96818", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "profiles": [
+      { "network": "github", "username": "choytr", "url": "http://github.com/choytr" },
+      { "network": "linkedin", "username": "choytr", "url": "https://www.linkedin.com/in/truman-choy-639859289/" }
+    ]
+  },
+  "interests": [
+    { "name": "Programming, Software Development, Video Games" }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "keywords": [ "C", "C++", "Java", "Javascript" ]
+    },
+    {
+      "name": "Toolsets/OS",
+      "keywords": [ "Windows 10/11", "Git/GitHub" ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Hawaii, Honolulu, HI",
+      "area": "Computer Science (expected Spring, 2026)",
+      "studyType": "B.S.",
+      "startDate": "2021",
+      "endDate": "Present",
+      "courses": [
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "Blue Truck Teppanyaki",
+      "position": "Cashier",
+      "website": "https://www.instagram.com/bluetruckteppanyaki/?hl=en",
+      "startDate": "2021",
+      "endDate": "",
+      "summary": "Part-time cashier for a Blue Truck Teppanyaki food truck",
+      "highlights": [
+        "Processed and distributed customer orders in a fast-paced environment"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Moanalua High School Music Department",
+      "website": "",
+      "position": "",
+      "startDate": "2017",
+      "endDate": "2021",
+      "summary": "Participated in band throughout all of high school",
+      "highlights": [
+        "Concert Band Bass Clarinet, 2017",
+        "Symphonic Wind Ensemble Bass Clarinet, 2018-2021",
+        "Marching Band and Color Guard Clarinet Section Member, 2017-2021",
+        "Marching Band and Color Guard Clarinet Section Leader, 2021",
+        "Volunteered to assist distributing 'Huli-Huli Chicken' for a fundraiser, 2019" 
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Available upon request"
+    }
+  ]
+}
