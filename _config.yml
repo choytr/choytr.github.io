@@ -1,16 +1,40 @@
-# REQUIRED CHANGES
-# Edit next line to provide your own name.
 title: Truman Choy | Professional Portfolio
-# Edit next line, replacing 'techfolios' with your github username
+description: My portfolio
 url: "https://choytr.github.io"
-# Edit next line so that baseurl is "" if your repo is <username>.github.io
+timezone: Pacific/Honolulu
+timezone_short: HST
 baseurl: ""
 
-# OPTIONAL CHANGES
-## Specify the theme using any of the css files in css/techfolio-theme
-techfolio-theme: default.css
-## Specify the formatting for triple backquote code sections.
-rouge-theme: github.css
+# Keywords
+keywords: ['seo', 'key', 'words']
+
+# Analytics (Plausible requires sign-up)
+analytics:
+  plausible:
+    enabled: false
+    site_fqdn: 'your.site.fqdn'
+    script_source: 'https://plausible.io/js/script.js'
+
+# Styling
+sass:
+  sass_dir: _sass
+  style: expanded # compact, expanded or compressed
+
+# Paginate
+pagination:
+  enabled: true
+  # Value set low for demonstration purposes
+  per_page: 3
+  sort_field: 'date'
+  sort_reverse: true
+
+# Category Paginating
+autopages:
+  enabled: true
+  categories:
+    title: 'Posts in category :cat'
+    permalink: '/category/:cat'
+    silent: false
 
 # DON'T CHANGE THE FOLLOWING (unless you know what you're doing)
 markdown: kramdown
@@ -24,9 +48,13 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - COPYING
   - README.md
 include:
   - .nojekyll
   - _data
 plugins:
   - jekyll-gist
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-seo-tag
