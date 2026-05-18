@@ -1,9 +1,12 @@
-title: Truman Choy | Professional Portfolio
-description: My portfolio
-url: "https://choytr.github.io"
+title: Truman Choy
+tagline: 'Portfolio'
+description: 'Frontend-oriented software engineer.'
+author: 'Truman Choy'
+url: 'https://choytr.github.io'
+contact:
+  email: 'choytr@hawaii.edu'
 timezone: Pacific/Honolulu
-timezone_short: HST
-baseurl: ""
+baseurl: ''
 
 # Keywords
 keywords: ['seo', 'key', 'words']
