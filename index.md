@@ -14,7 +14,7 @@ Most of my experience comes from internships and research projects building web 
 
 During a research experience for undergraduate students (REU) with the Hawaii Climate Data Portal at UH, I rebuilt a deprecated [climate data visualization app](https://rainfall.geography.hawaii.edu/).
 
-In an internship with Vanta.gg, I explored web game development and built a small web game using Phaser.js and JavaScript.
+In an internship with Vanta.gg, I explored web game development and built a small web game using Phaser.io and JavaScript.
 
 I was a software engineering intern at Zippy's, where I did frontend development in a team environment that followed agile development practices.
 
