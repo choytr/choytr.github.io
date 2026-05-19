@@ -13,7 +13,6 @@ body {
 
 /* 03 Spacing */
 
-
 .padded {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -33,6 +32,10 @@ div.main-content h2 {
 
 header h1, h5 {
   display: inline;
+}
+
+p, ul {
+  margin: 1em 0;
 }
 
 /* 04 Color and contrast */
@@ -69,6 +72,10 @@ a {
 
 h1,
 h2,
+h3,
+h4,
+h5,
+h6,
 strong {
   font-weight: 500;
 }

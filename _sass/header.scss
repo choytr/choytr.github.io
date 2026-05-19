@@ -1,5 +1,7 @@
 .header {
-  padding-top: 35px
+  padding-top: 35px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header nav {

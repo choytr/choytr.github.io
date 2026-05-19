@@ -1,5 +1,6 @@
 ---
 title: Contact
+published: false
 ---
 
 This is a page for my contact info.

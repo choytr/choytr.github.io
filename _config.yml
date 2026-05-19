@@ -4,12 +4,11 @@ description: 'Frontend-oriented software engineer.'
 author: 'Truman Choy'
 url: 'https://choytr.github.io'
 contact:
-  email: 'choytr@hawaii.edu'
+  email: choytr@hawaii.edu
+  github: https://github.com/choytr
+  linkedin: https://linkedin.com/in/choytr
 timezone: Pacific/Honolulu
 baseurl: ''
-
-# Keywords
-keywords: ['seo', 'key', 'words']
 
 # Analytics (Plausible requires sign-up)
 analytics:
