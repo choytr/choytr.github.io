@@ -18,7 +18,7 @@ In an internship with Vanta.gg, I explored web game development and built a smal
 
 I was a software engineering intern at Zippy's, where I did frontend development in a team environment that followed agile development practices.
 
-Currently, I’m working with Malama Go, building web applications for restaurants.
+Currently, I’m working with Malama Go, building web applications and working across both frontend and backend systems.
 
 ## Interests
 
