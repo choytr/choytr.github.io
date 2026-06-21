@@ -9,7 +9,16 @@ To set it up, install [Ruby](https://www.ruby-lang.org/en/documentation/installa
 Then run:
 
 ```
+bundle install
 bundle exec jekyll serve
 ```
 
 and view the site at `localhost:4000`.
+
+To develop with unpublished pages, do:
+
+```
+bundle exec jekyll serve --unpublished
+```
+
+and you'll be able to see pages that have `published: false` in the front matter.
