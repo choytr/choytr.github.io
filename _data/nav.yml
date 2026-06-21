@@ -1,9 +1,7 @@
 - name: Home
   link: /
-- name: Tech Stack
-  link: /tech
-- name: Work
-  link: /work
-- name: Projects
-  link: /projects
+- name: Experience
+  link: /experience
+# - name: Projects
+  # link: /projects
   
