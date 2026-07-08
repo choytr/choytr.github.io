@@ -10,9 +10,9 @@ Programming is quite fun for me! I like building software systems and understand
 
 ## Skill Set
 
-Frontend: React, Next.js, TypeScript, HTML, CSS Tailwind CSS
+Frontend: React, Next.js, TypeScript, HTML, CSS, Tailwind CSS
 
-Backend: Node.js, Express.js, MySQL, Drizzle ORM
+Backend: Node.js, Express.js, MySQL, PostgreSQL, Drizzle ORM
 
 Cloud & DevOps: Docker, Google Cloud, Azure DevOps
 
